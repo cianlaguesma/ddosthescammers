@@ -1,5 +1,6 @@
 import requests
 import threading
+import sys
 from faker import Faker
 url = 'https://dappsauthes.com/process.php'
 
@@ -20,6 +21,7 @@ def do_thread():
         # print(data['recovery-phrase'])
         response  = requests.post(url, data)
         print(response)
+        sys.stdout.flush()
 do_thread()
 # for x in range (0,10):
 #     t = threading.Thread(target=do_thread)
