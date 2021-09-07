@@ -20,13 +20,14 @@ def do_thread():
         # print(data['recovery-phrase'])
         response  = requests.post(url, data)
         print(response)
-for x in range (0,10):
-    t = threading.Thread(target=do_thread)
-    t.daemon = True
-    threads.append(t)
+do_thread()
+# for x in range (0,10):
+#     t = threading.Thread(target=do_thread)
+#     t.daemon = True
+#     threads.append(t)
 
-for x in range(0,10):
-    threads[x].start()
+# for x in range(0,10):
+#     threads[x].start()
 
-for x in range(0,10):
-    threads[x].join()
+# for x in range(0,10):
+#     threads[x].join()
